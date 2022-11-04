@@ -1,0 +1,179 @@
+<html lang="en" class="sl-theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/dark.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/shoelace.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <sl-drawer label="Drawer" class="drawer-overview">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+        <sl-button slot="footer" variant="primary">Close</sl-button>
+      </sl-drawer>
+      <div class="header">
+        <h2 class="logo"></h2>
+        <button class="scroll-top-btn" onclick="scrollToTop()">
+          Scroll Top
+        </button>
+        <div class="buttons">
+          <sl-button>Open Drawer</sl-button>
+        </div>
+      </div>
+      <div class="first-page">
+        <div class="image-background"></div>
+      </div>
+      <div class="second-page">
+        <div class="content-second">
+          <div class="text-second">
+            <div class="text-second-part-1">
+              <h2>HISTORY</h2>
+              <p>
+                Lorem ipsum dolor sit m nulla cum fugiat esse quidem rem fugit
+                beatae voluptas. Molestiae saepe quisquam voluptates aliquid
+                voluptatem quis molestias sint voluptatibus atque rem?
+              </p>
+            </div>
+            <div class="text-second-part-2">
+              <div class="text-h2">
+                <h2>WHAT IS PROCREATE?</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit m nulla cum fugiat esse quidem rem fugit
+                beatae voluptas. Molestiae saepe quisquam voluptates aliquid
+                voluptatem quis molestias sint voluptatibus atque rem?
+              </p>
+            </div>
+          </div>
+          <div class="second-image-position">
+            <div class="second-image-background"></div>
+          </div>
+        </div>
+      </div>
+      <div class="third-page">
+        <div class="third-text">
+          <h1>DISCOVER PROCREATE</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+            temporibus beatae porro distinctio sequi nisi? Quibusdam accusamus,
+            incidunt alias non, cumque ea dolor sapiente dolores aut inventore
+            quam perferendis repellat.
+          </p>
+        </div>
+        <div class="third-image-position">
+          <div class="third-image">
+            <div class="top-box">
+              <div class="left-box"></div>
+              <div class="hide">This is a text</div>
+              <div class="right-box"></div>
+            </div>
+            <div class="left-most-box"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fourth-page">
+        <div class="container-swiper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/swiper1.JPG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper2.PNG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper1.JPG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper2.PNG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper1.JPG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper2.PNG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper1.JPG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper2.PNG" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/swiper1.JPG" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="fifth-page">
+        <div class="fifth-container">
+          <div class="image-container-fifth">
+            <div class="fifth-image"></div>
+          </div>
+          <div class="container-flex-fifth">
+            <div class="text-para">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+              voluptatum sed est dolorem ut alias sint, tempore nulla ex facilis
+              omnis delectus aperiam eveniet magnam ipsa fuga commodi
+              voluptatibus ab.
+            </div>
+            <div>only at 9.99 USD</div>
+            <div>
+              <button>Click me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const drawer = document.querySelector(".drawer-overview");
+      const openButton = drawer.nextElementSibling;
+      const closeButton = drawer.querySelector('sl-button[variant="primary"]');
+
+      openButton.addEventListener("click", () => drawer.show());
+      closeButton.addEventListener("click", () => drawer.hide());
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      function scrollToTop() {
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>
